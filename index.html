@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Propuesta Comercial BACORD — QUIFARMA S.A.S.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --navy:    #1b3462;
+  --navy2:   #0f2040;
+  --orange:  #ef9422;
+  --yellow:  #ffc72c;
+  --lb:      #A9D7E0;
+  --xlb:     #E3F6F9;
+  --green:   #169e49;
+  --gfill:   #E8F5E9;
+  --gdark:   #0a5e2a;
+  --text:    #1a1a2e;
+  --muted:   #5a6a7a;
+  --border:  #e2e8f0;
+  --white:   #ffffff;
+  --lgray:   #f7f8fa;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); font-size: 15px; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+
+/* ── Print ── */
+@media print {
+  .no-print { display: none !important; }
+  body { font-size: 12px; }
+  .section { padding: 32px 0; }
+  .cover { min-height: auto; page-break-after: always; }
+  a { color: inherit; text-decoration: none; }
+}
+
+/* ── Header ── */
+.header-bar { background: var(--navy2); padding: 13px 48px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 24px rgba(0,0,0,.3); }
+.header-logo-name { color: white; font-weight: 800; font-size: 17px; letter-spacing: .4px; line-height: 1; }
+.header-logo-sub { color: var(--lb); font-size: 9.5px; font-weight: 600; letter-spacing: 2.5px; text-transform: uppercase; display: block; margin-top: 3px; }
+.header-badge { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); color: rgba(255,255,255,.7); font-size: 10.5px; font-weight: 600; padding: 5px 14px; border-radius: 100px; letter-spacing: .5px; text-transform: uppercase; }
+.print-btn { background: var(--orange); color: white; border: none; padding: 8px 20px; border-radius: 6px; font-weight: 700; font-size: 12px; cursor: pointer; transition: background .2s; font-family: 'Inter', sans-serif; margin-left: 14px; letter-spacing: .3px; }
+.print-btn:hover { background: #d4841c; }
+
+/* ── Layout ── */
+.section { padding: 80px 48px; }
+.container { max-width: 1080px; margin: 0 auto; }
+.overline { font-size: 11px; font-weight: 700; letter-spacing: 3.5px; text-transform: uppercase; color: var(--orange); margin-bottom: 12px; }
+.overline.light { color: var(--lb); }
+.sec-title { font-size: clamp(1.8rem, 3.5vw, 2.4rem); font-weight: 900; color: var(--navy); margin-bottom: 14px; letter-spacing: -.5px; line-height: 1.1; }
+.sec-title.white { color: white; }
+.sec-sub { color: var(--muted); max-width: 640px; margin-bottom: 44px; font-size: 15px; line-height: 1.75; }
+hr.div { border: none; border-top: 1.5px solid var(--border); margin: 0; }
+
+/* ── Cover ── */
+.cover { background: linear-gradient(140deg, #0d1f3c 0%, #1b3462 55%, #1b3462 100%); padding: 90px 48px 80px; min-height: 94vh; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+.cover::before { content: ''; position: absolute; top: -120px; right: -80px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(239,148,34,.18) 0%, transparent 65%); pointer-events: none; }
+.cover::after { content: ''; position: absolute; bottom: -100px; left: -60px; width: 400px; height: 400px; background: radial-gradient(circle, rgba(169,215,224,.1) 0%, transparent 65%); pointer-events: none; }
+.cover-overline { font-size: 11px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--orange); margin-bottom: 18px; }
+.cover-title { font-size: clamp(2.8rem, 7vw, 5rem); font-weight: 900; color: white; line-height: 1.02; letter-spacing: -1px; margin-bottom: 10px; }
+.cover-title em { color: var(--orange); font-style: normal; }
+.cover-subtitle { font-size: 1.05rem; color: rgba(255,255,255,.55); max-width: 500px; margin-bottom: 52px; line-height: 1.75; font-weight: 400; }
+.cover-card { background: rgba(255,255,255,.06); backdrop-filter: blur(10px); border-radius: 16px; border: 1px solid rgba(255,255,255,.12); padding: 32px 36px; max-width: 540px; }
+.cover-card-title { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--orange); margin-bottom: 22px; }
+.cover-row { display: flex; gap: 0; margin-bottom: 11px; align-items: flex-start; font-size: 14px; }
+.cover-row:last-child { margin-bottom: 0; }
+.cr-label { font-weight: 600; color: rgba(255,255,255,.4); min-width: 140px; flex-shrink: 0; font-size: 13px; }
+.cr-value { color: rgba(255,255,255,.9); font-size: 13px; }
+
+/* ── Stats strip ── */
+.stats-strip { background: var(--orange); padding: 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+.stat-item { padding: 28px 24px; text-align: center; border-right: 1px solid rgba(255,255,255,.2); }
+.stat-item:last-child { border-right: none; }
+.stat-num { font-size: 2.6rem; font-weight: 900; color: white; line-height: 1; letter-spacing: -1px; }
+.stat-label { font-size: 11px; color: rgba(255,255,255,.8); margin-top: 5px; font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; }
+
+/* ── Feature cards ── */
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.feature-card { background: white; border-radius: 14px; padding: 28px 24px; border: 1.5px solid var(--border); border-top: 4px solid var(--navy); box-shadow: 0 2px 16px rgba(27,52,98,.06); transition: transform .2s, box-shadow .2s; }
+.feature-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(27,52,98,.13); }
+.feature-icon { width: 46px; height: 46px; background: var(--xlb); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 21px; margin-bottom: 16px; }
+.feature-name { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.feature-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* ── Before / After ── */
+.ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.ba-card { border-radius: 14px; padding: 32px 28px; }
+.ba-card.before { background: #f8f0eb; border: 1.5px solid #e8c9a8; }
+.ba-card.after { background: var(--gfill); border: 1.5px solid #a8d8b8; }
+.ba-head { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+.ba-badge { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 4px 12px; border-radius: 100px; }
+.ba-badge.before { background: #e8c9a8; color: #7a4510; }
+.ba-badge.after { background: #a8d8b8; color: var(--gdark); }
+.ba-list { list-style: none; }
+.ba-list li { font-size: 13.5px; line-height: 1.6; margin-bottom: 12px; padding-left: 22px; position: relative; }
+.ba-card.before .ba-list li { color: #7a4510; }
+.ba-card.after .ba-list li { color: var(--gdark); font-weight: 500; }
+.ba-list li::before { position: absolute; left: 0; top: 1px; font-size: 14px; }
+.ba-card.before .ba-list li::before { content: '✗'; color: #c0622a; }
+.ba-card.after .ba-list li::before { content: '✓'; color: var(--green); }
+
+/* ── Risk cards ── */
+.risks-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 40px; }
+.risk-card { background: white; border-radius: 14px; padding: 28px 24px; border: 1.5px solid var(--border); border-left: 5px solid var(--orange); box-shadow: 0 2px 12px rgba(0,0,0,.05); }
+
+/* ── Tables ── */
+.table-wrap { overflow-x: auto; border-radius: 12px; border: 1.5px solid var(--border); margin-bottom: 32px; box-shadow: 0 2px 12px rgba(27,52,98,.05); }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+thead th { background: var(--navy); color: white; font-weight: 600; padding: 14px 16px; text-align: left; font-size: 13px; white-space: nowrap; }
+tbody tr { border-bottom: 1px solid var(--border); }
+tbody tr:last-child { border-bottom: none; }
+tbody td { padding: 13px 16px; vertical-align: top; }
+tbody tr:nth-child(even) td { background: var(--lgray); }
+.td-r { text-align: right; font-weight: 600; }
+tr.total td { background: var(--gfill) !important; color: var(--gdark); font-weight: 700; border-top: 2px solid var(--green); }
+tr.total td:last-child { color: var(--green); }
+.note-tag { display: inline-block; background: var(--xlb); color: var(--navy); font-size: 10.5px; font-weight: 600; padding: 2px 9px; border-radius: 100px; margin-left: 7px; letter-spacing: .5px; text-transform: uppercase; vertical-align: middle; }
+.zero { color: var(--muted); font-style: italic; }
+
+/* ── Config card ── */
+.config-card { background: white; border-radius: 16px; border: 2px solid var(--green); overflow: hidden; box-shadow: 0 4px 32px rgba(22,158,73,.1); }
+.config-header { background: var(--green); padding: 18px 28px; display: flex; align-items: center; gap: 14px; }
+.config-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.config-row { display: flex; flex-direction: column; padding: 16px 24px; border-bottom: 1px solid #d4edda; border-right: 1px solid #d4edda; }
+.config-row:nth-child(even) { border-right: none; }
+.config-row.full { grid-column: 1/-1; border-right: none; }
+.config-row:nth-last-child(-n+2) { border-bottom: none; }
+.config-lbl { font-size: 10.5px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gdark); margin-bottom: 4px; }
+.config-val { font-size: 14px; color: var(--text); font-weight: 500; }
+
+/* ── Component header ── */
+.comp-header { display: flex; align-items: center; gap: 18px; margin-bottom: 28px; }
+.comp-num { width: 52px; height: 52px; background: var(--navy); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 22px; font-weight: 900; color: white; flex-shrink: 0; }
+.comp-title { font-size: 1.4rem; font-weight: 800; color: var(--navy); letter-spacing: -.3px; }
+.comp-subtitle { font-size: 13px; color: var(--muted); margin-top: 3px; }
+
+/* ── Callout box ── */
+.callout { background: var(--navy); border-radius: 14px; padding: 24px 28px; margin-bottom: 28px; display: flex; align-items: flex-start; gap: 18px; }
+.callout-icon { font-size: 26px; flex-shrink: 0; margin-top: 2px; }
+.callout p { color: rgba(255,255,255,.8); font-size: 14px; line-height: 1.7; margin: 0; }
+.callout strong { color: white; }
+
+/* ── GROWTH banner ── */
+.growth-banner { border-radius: 16px; overflow: hidden; margin-bottom: 28px; box-shadow: 0 4px 32px rgba(27,52,98,.2); }
+.growth-banner-top { background: linear-gradient(135deg, var(--navy2) 0%, var(--navy) 100%); padding: 32px 36px; display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
+.growth-banner-badge { font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--lb); background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); padding: 4px 12px; border-radius: 100px; display: inline-block; margin-bottom: 12px; }
+.growth-banner-price { font-size: 3rem; font-weight: 900; color: white; line-height: 1; letter-spacing: -1px; }
+.growth-banner-price-sub { font-size: 14px; font-weight: 400; color: rgba(255,255,255,.5); margin-top: 5px; }
+.growth-banner-desc { color: rgba(255,255,255,.75); font-size: 14px; line-height: 1.75; max-width: 480px; }
+
+/* ── Includes grid ── */
+.includes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 32px; }
+.include-item { display: flex; gap: 12px; align-items: flex-start; padding: 15px 16px; background: var(--lgray); border-radius: 11px; border-left: 3px solid var(--green); }
+.include-item.highlight { background: var(--navy); border-left-color: var(--yellow); }
+.include-check { font-weight: 700; font-size: 15px; flex-shrink: 0; color: var(--green); }
+.include-item.highlight .include-check { color: var(--yellow); }
+.include-title { font-size: 13px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+.include-item.highlight .include-title { color: white; }
+.include-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+.include-item.highlight .include-desc { color: rgba(255,255,255,.55); }
+
+/* ── Addon cards ── */
+.addons-grid3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+.addon-card { background: white; border: 1.5px solid var(--border); border-radius: 12px; padding: 20px 22px; }
+.addon-accent { height: 4px; border-radius: 4px 4px 0 0; margin: -20px -22px 18px; }
+.addon-lbl { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; color: var(--orange); }
+.addon-price { font-size: 1.4rem; font-weight: 800; color: var(--navy); margin-bottom: 6px; }
+.addon-price span { font-size: 13px; font-weight: 500; color: var(--muted); }
+.addon-desc { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
+
+/* ── Implementation phases ── */
+.impl-track { display: grid; grid-template-columns: 1fr 40px 1fr 40px 1fr; align-items: start; gap: 0; }
+.impl-arrow { display: flex; align-items: center; justify-content: center; padding-top: 44px; }
+.impl-arrow span { font-size: 22px; color: var(--yellow); }
+.impl-phase { background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.13); border-radius: 16px; padding: 28px 24px; }
+.impl-phase-num { width: 44px; height: 44px; background: var(--orange); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 900; color: white; margin-bottom: 16px; }
+.impl-phase-name { font-size: 16px; font-weight: 800; color: white; margin-bottom: 5px; }
+.impl-phase-duration { font-size: 11px; font-weight: 600; color: var(--yellow); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 18px; }
+.impl-phase-list { list-style: none; }
+.impl-phase-list li { font-size: 13px; color: rgba(255,255,255,.7); margin-bottom: 9px; padding-left: 16px; position: relative; line-height: 1.5; }
+.impl-phase-list li::before { content: ''; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; border-radius: 50%; background: var(--yellow); }
+
+/* ── Investment hero ── */
+.inv-hero { background: linear-gradient(135deg, var(--navy2) 0%, var(--navy) 100%); border-radius: 20px; padding: 52px 48px; margin-bottom: 32px; position: relative; overflow: hidden; }
+.inv-hero::before { content: ''; position: absolute; top: -60px; right: -40px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(239,148,34,.2) 0%, transparent 60%); }
+.inv-hero-grid { display: grid; grid-template-columns: 1fr 1px 1fr 1px 1fr; gap: 0; position: relative; z-index: 1; }
+.inv-hero-divider { background: rgba(255,255,255,.12); }
+.inv-hero-item { text-align: center; padding: 12px 32px; }
+.inv-hero-lbl { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--lb); margin-bottom: 10px; }
+.inv-hero-val { font-size: 2.6rem; font-weight: 900; color: white; line-height: 1; letter-spacing: -1px; }
+.inv-hero-val em { color: var(--yellow); font-style: normal; }
+.inv-hero-note { font-size: 12px; color: rgba(255,255,255,.4); margin-top: 6px; }
+
+/* ── Next steps ── */
+.steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.step-card { background: white; border-radius: 14px; padding: 32px 28px; border: 1.5px solid var(--border); box-shadow: 0 2px 12px rgba(27,52,98,.06); }
+.step-num { width: 44px; height: 44px; background: var(--navy); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 900; color: white; margin-bottom: 18px; }
+
+/* ── Contact ── */
+.contact-section { background: var(--navy2); }
+.contact-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: 18px; padding: 48px; display: flex; align-items: center; gap: 48px; max-width: 680px; }
+.contact-avatar { width: 80px; height: 80px; background: var(--orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; font-weight: 900; color: white; flex-shrink: 0; }
+
+/* ── Misc ── */
+.deploy-pills { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 28px; }
+.pill { background: rgba(27,52,98,.06); border: 1.5px solid var(--border); color: var(--navy); font-size: 13px; font-weight: 600; padding: 7px 16px; border-radius: 100px; }
+.pill.dark { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.15); color: rgba(255,255,255,.8); }
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  .features-grid,.risks-grid,.steps-grid{ grid-template-columns:1fr 1fr; }
+  .impl-track{ grid-template-columns:1fr; }
+  .impl-arrow{ display:none; }
+  .inv-hero-grid{ grid-template-columns:1fr; }
+  .inv-hero-divider{ display:none; }
+  .ba-grid,.includes-grid{ grid-template-columns:1fr; }
+  .stats-grid{ grid-template-columns:1fr 1fr; }
+  .config-grid{ grid-template-columns:1fr; }
+  .config-row{ border-right:none!important; }
+  .contact-card{ flex-direction:column; text-align:center; }
+  .header-badge{ display:none; }
+}
+@media(max-width:600px){
+  .section{ padding:52px 20px; }
+  .cover{ padding:64px 20px; }
+  .features-grid,.risks-grid,.steps-grid,.addons-grid3,.stats-grid{ grid-template-columns:1fr; }
+  .header-bar{ padding:12px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ HEADER ══════════════════ -->
+<header class="header-bar no-print">
+  <div>
+    <div class="header-logo-name">GI Proyectos</div>
+    <span class="header-logo-sub">BACORD by ZENTTRA</span>
+  </div>
+  <div style="display:flex;align-items:center">
+    <span class="header-badge">PROPUESTA CONFIDENCIAL — QUIFARMA S.A.S.</span>
+    <button class="print-btn" onclick="window.print()">Imprimir / PDF</button>
+  </div>
+</header>
+
+<!-- ══════════════════ 1. PORTADA ══════════════════ -->
+<section class="cover">
+  <div class="container">
+    <div class="cover-overline">Propuesta Comercial · Junio 2026</div>
+    <h1 class="cover-title">Propuesta<br>Comercial<br><em>BACORD</em></h1>
+    <p class="cover-subtitle">El registro electrónico de lotes que elimina el papel y pone la trazabilidad en tiempo real al centro de su operación.</p>
+    <div class="cover-card">
+      <div class="cover-card-title">Preparada para</div>
+      <div class="cover-row"><span class="cr-label">Empresa</span><span class="cr-value"><strong style="color:white">QUIFARMA S.A.S.</strong> · NIT 890.938.300-0</span></div>
+      <div class="cover-row"><span class="cr-label">Contacto</span><span class="cr-value">Yhedy Adriana Mejía Rodríguez<br><span style="color:rgba(255,255,255,.4);font-size:12px">Director Técnico</span></span></div>
+      <div class="cover-row"><span class="cr-label">Responsable GI</span><span class="cr-value">Hugo Fernando Rosas F.<br><span style="color:rgba(255,255,255,.4);font-size:12px">Director Comercial</span></span></div>
+      <div class="cover-row"><span class="cr-label">Fecha</span><span class="cr-value">Junio 2026 · Validez 30 días</span></div>
+      <div class="cover-row"><span class="cr-label">Sector</span><span class="cr-value">Farmacéutico y Dermocosmético</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════ STATS STRIP ══════════════════ -->
+<div class="stats-strip no-print">
+  <div class="stats-grid">
+    <div class="stat-item">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Trazabilidad por lote</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Papel en producción</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">+5</div>
+      <div class="stat-label">Laboratorios en Colombia</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">21 CFR</div>
+      <div class="stat-label">Part 11 · INVIMA ready</div>
+    </div>
+  </div>
+</div>
+
+<hr class="div" />
+
+<!-- ══════════════════ 2. QUÉ ES BACORD ══════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="overline">La plataforma</div>
+    <h2 class="sec-title">BACORD es el sistema nervioso<br>digital de su producción</h2>
+    <p class="sec-sub">BACORD es una plataforma de Registro Electrónico de Lotes (EBR — Electronic Batch Record) diseñada para la industria farmacéutica y dermocosmética. Digitaliza y controla todo el proceso desde la orden de fabricación hasta el cierre y liberación del lote, con trazabilidad completa, firmas electrónicas e información en tiempo real. Se adapta a los procesos de cada organización y puede desplegarse on-premise o en la nube del cliente. <strong>El laboratorio lo administra directamente</strong>: el equipo de QUIFARMA será capacitado para crear, modificar y versionar sus propios formularios de lote en BACORD — lo que significa que incorporar un nuevo producto o grupo de producción en el futuro no requiere depender de GI Proyectos. Si prefieren que GI lo haga, también es posible contratarlo bajo los mismos precios de implementación de grupos.</p>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">📋</div>
+        <div class="feature-name">Ejecución digital del batch</div>
+        <p class="feature-desc">Instrucciones paso a paso, registro de parámetros, confirmación de materiales y captura en tiempo real desde la línea. El operario ejecuta — sin papel.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">✍️</div>
+        <div class="feature-name">Firmas electrónicas</div>
+        <p class="feature-desc">Conformes con FDA 21 CFR Part 11 e INVIMA. Cada acción registrada con usuario, timestamp y contexto — inmutable y auditable.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔍</div>
+        <div class="feature-name">Trazabilidad completa</div>
+        <p class="feature-desc">Historial íntegro de materiales, parámetros, equipos y personal por lote. Recuperable en segundos ante cualquier auditoría o investigación.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">👥</div>
+        <div class="feature-name">Perfiles y permisos</div>
+        <p class="feature-desc">Operario, supervisor, jefe de producción, analista de calidad, validaciones y auditor. Cada perfil con acceso estrictamente controlado.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔗</div>
+        <div class="feature-name">Integración con ERP <span style="font-size:10px;font-weight:700;color:var(--orange);letter-spacing:.5px">OPCIONAL</span></div>
+        <p class="feature-desc">Conexión bidireccional: órdenes, consumo de materiales e inventario. Compatible con SAP, Oracle, Infor, Dynamics y otros.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚙️</div>
+        <div class="feature-name">Integración con equipos <span style="font-size:10px;font-weight:700;color:var(--orange);letter-spacing:.5px">OPCIONAL</span></div>
+        <p class="feature-desc">Captura automática de parámetros críticos desde equipos vía API u OPC-UA. Elimina la entrada manual del operario.</p>
+      </div>
+    </div>
+
+    <div class="deploy-pills">
+      <span class="pill">🖥️ On-Premise</span>
+      <span class="pill">☁️ Nube del cliente</span>
+      <span class="pill" style="background:var(--navy);color:white;border-color:var(--navy)">Sanofi · Genfar · Prebel · Procaps · Quibi</span>
+    </div>
+  </div>
+</section>
+
+<hr class="div" />
+
+<!-- ══════════════════ 3. EL PROBLEMA ══════════════════ -->
+<section class="section" style="background:var(--lgray)">
+  <div class="container">
+    <div class="overline">El problema</div>
+    <h2 class="sec-title">Cada lote en papel<br>es un riesgo que se acumula</h2>
+    <p class="sec-sub">El papel no es solo ineficiente — es un pasivo regulatorio, operativo y de calidad que crece con el volumen.</p>
+
+    <div class="risks-grid" style="margin-bottom:36px">
+      <div class="risk-card">
+        <div style="font-size:28px;margin-bottom:12px">📋</div>
+        <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px">Riesgo regulatorio</div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.6">Observaciones de INVIMA por registros incompletos, ilegibles o sin trazabilidad. En farmacéutica y dermocosmética, esto puede implicar retención de lotes o suspensiones de actividades.</p>
+      </div>
+      <div class="risk-card">
+        <div style="font-size:28px;margin-bottom:12px">💸</div>
+        <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px">Costo operativo oculto</div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.6">Personal dedicado a digitalización manual, búsqueda de registros, reimpresiones y conciliaciones entre sistemas. Un costo que crece en proporción directa al volumen de producción.</p>
+      </div>
+      <div class="risk-card">
+        <div style="font-size:28px;margin-bottom:12px">⏱️</div>
+        <div style="font-size:14px;font-weight:700;color:var(--navy);margin-bottom:8px">Tiempos de respuesta lentos</div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.6">Preparar una auditoría interna o de INVIMA puede tomar días. Investigar una desviación requiere buscar en archivos físicos. Con BACORD, cualquier historial está disponible en segundos.</p>
+      </div>
+    </div>
+
+    <div class="ba-grid">
+      <div class="ba-card before">
+        <div class="ba-head"><span class="ba-badge before">Sin BACORD</span></div>
+        <ul class="ba-list">
+          <li>Registros en papel o Excel susceptibles a errores e ilegibilidad</li>
+          <li>Revisión manual del batch record hoja por hoja — días por lote</li>
+          <li>Trazabilidad fragmentada en múltiples documentos físicos</li>
+          <li>Sin visibilidad en tiempo real del estado de producción</li>
+          <li>Preparación de auditorías en días, no en minutos</li>
+        </ul>
+      </div>
+      <div class="ba-card after">
+        <div class="ba-head"><span class="ba-badge after">Con BACORD</span></div>
+        <ul class="ba-list">
+          <li>Ejecución digital con firma electrónica — inmutable y auditable</li>
+          <li>Revisión por excepción asistida por IA: horas en lugar de días</li>
+          <li>Historial completo por lote centralizado y recuperable en segundos</li>
+          <li>Dashboard en tiempo real con alertas ante desviaciones</li>
+          <li>Auditorías preparadas en minutos desde cualquier dispositivo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div" />
+
+<!-- ══════════════════ 4. CASOS DE REFERENCIA ══════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="overline">Clientes de referencia</div>
+    <h2 class="sec-title">Laboratorios que ya operan<br>con BACORD en Colombia</h2>
+    <p class="sec-sub">Estos son algunos de los proyectos activos — distintos sectores, distintas escalas, el mismo resultado: operación digital con trazabilidad completa.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+
+      <!-- Procaps -->
+      <div style="background:white;border-radius:16px;border:1.5px solid var(--border);overflow:hidden;box-shadow:0 2px 16px rgba(27,52,98,.07)">
+        <div style="background:var(--navy);padding:24px 24px 20px;text-align:center">
+          <div style="font-size:22px;font-weight:900;color:white;letter-spacing:-0.5px;line-height:1">PROCAPS</div>
+          <div style="font-size:10px;font-weight:600;color:var(--lb);letter-spacing:2px;text-transform:uppercase;margin-top:4px">GROUP</div>
+        </div>
+        <div style="padding:22px 22px 24px">
+          <div style="font-size:10.5px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px">Producción · Integración avanzada</div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px">
+            <li style="display:flex;gap:9px;font-size:13px;color:var(--text);line-height:1.5"><span style="color:var(--navy);font-weight:700;flex-shrink:0;margin-top:1px">→</span>Implementación en planta de hormogel</li>
+            <li style="display:flex;gap:9px;font-size:13px;color:var(--text);line-height:1.5"><span style="color:var(--navy);font-weight:700;flex-shrink:0;margin-top:1px">→</span>Integración con SAP y equipos implicados en el batch record</li>
+            <li style="display:flex;gap:9px;font-size:13px;color:var(--text);line-height:1.5"><span style="color:var(--navy);font-weight:700;flex-shrink:0;margin-top:1px">→</span>Captura de datos vía IoT desde equipos de producción</li>
+            <li style="display:flex;gap:9px;font-size:13px;color:var(--text);line-height:1.5"><span style="color:var(--navy);font-weight:700;flex-shrink:0;margin-top:1px">→</span>Extracción de información relevante desde el historiador de planta</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Quibi -->
+      <div style="background:white;border-radius:16px;border:1.5px solid var(--border);overflow:hidden;box-shadow:0 2px 16px rgba(27,52,98,.07)">
+        <div style="background:linear-gradient(135deg,#d95f0a,#ef9422);padding:24px 24px 20px;text-align:center">
+          <div style="font-size:22px;font-weight:900;color:white;letter-spacing:-0.5px;line-height:1">Quibi</div>
+          <div style="font-size:10px;font-weight:600;color:rgba(255,255,255,.75);letter-spacing:2px;text-transform:uppercase;margin-top:4px">BPM · BPL</div>
+        </div>
+        <div style="padding:22px 22px 24px">
+          <div style="font-size:10.5px;font-weight:700;color:var(--orange);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:12px">Expansión · Integración ERP</div>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px">
+            <li style="display:flex;gap:9px;font-size:13px;color:var(--text);line-height:1.5"><span style="color:#d95f0a;font-weight:700;flex-shrink:0;margin-top:1px">→</span>En expansión activa a todas las formas farmacéuticas de la empresa</li>
+            <li style="display:flex;gap:9px;font-size:13px;color:var(--text);line-height:1.5"><span style="color:#d95f0a;font-weight:700;flex-shrink:0;margin-top:1px">→</span>Integración de BACORD con el ERP de la compañía</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- QUIFARMA próximamente -->
+      <div style="background:white;border-radius:16px;border:2px dashed #b0bfd4;overflow:hidden;box-shadow:0 2px 16px rgba(27,52,98,.05);position:relative">
+        <div style="background:linear-gradient(135deg,#1b3462,#2a4f8f);padding:24px 24px 20px;text-align:center;position:relative">
+          <div style="position:absolute;top:10px;right:12px;background:var(--orange);color:white;font-size:9px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;padding:3px 9px;border-radius:20px">Próximamente</div>
+          <div style="font-size:20px;font-weight:900;color:white;letter-spacing:-0.5px;line-height:1">QUIFARMA</div>
+          <div style="font-size:10px;font-weight:600;color:rgba(255,255,255,.6);letter-spacing:2px;text-transform:uppercase;margin-top:4px">S.A.S.</div>
+        </div>
+        <div style="padding:22px 22px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px">
+          <div style="width:44px;height:44px;border-radius:50%;background:var(--lgray);border:2px dashed #b0bfd4;display:flex;align-items:center;justify-content:center;font-size:22px">🔒</div>
+          <p style="font-size:13px;color:var(--muted);line-height:1.6;margin:0">Este lugar está reservado para QUIFARMA.<br>La decisión de sumarse a la red de laboratorios colombianos que ya operan con BACORD está en sus manos.</p>
+          <div style="background:var(--xlb);border:1px solid var(--lb);border-radius:8px;padding:10px 14px;width:100%">
+            <div style="font-size:11.5px;font-weight:700;color:var(--navy);line-height:1.5">¿Será QUIFARMA el próximo laboratorio en digitalizar su operación?</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="div" />
+
+<!-- ══════════════════ 5. PERFIL QUIFARMA ══════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="overline">Configuración del cliente</div>
+    <h2 class="sec-title">Esta propuesta está construida<br>sobre la operación real de QUIFARMA</h2>
+    <p class="sec-sub">Cada componente, precio y condición refleja exactamente la situación actual de QUIFARMA S.A.S. No es una propuesta genérica — es una propuesta para ustedes.</p>
+
+    <div class="config-card">
+      <div class="config-header">
+        <div style="font-size:22px">🏭</div>
+        <div>
+          <div style="font-size:15px;font-weight:700;color:white">QUIFARMA S.A.S. · NIT 890.938.300-0</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.7);margin-top:2px">Perfil validado · Junio 2026</div>
+        </div>
+      </div>
+      <div class="config-grid">
+        <div class="config-row">
+          <span class="config-lbl">Sector</span>
+          <span class="config-val">Farmacéutico y Dermocosmético</span>
+        </div>
+        <div class="config-row">
+          <span class="config-lbl">Ciudad</span>
+          <span class="config-val">Bogotá, Colombia</span>
+        </div>
+        <div class="config-row">
+          <span class="config-lbl">Contacto técnico</span>
+          <span class="config-val">Yhedy Adriana Mejía Rodríguez<br><span style="font-size:12px;color:var(--muted)">Director Técnico</span></span>
+        </div>
+        <div class="config-row">
+          <span class="config-lbl">Planta</span>
+          <span class="config-val">1 planta · ~40 usuarios estimados</span>
+        </div>
+        <div class="config-row">
+          <span class="config-lbl">Tier BACORD</span>
+          <span class="config-val" style="color:var(--green);font-weight:700">GROWTH — 2 grupos activos (límite: 3)</span>
+        </div>
+        <div class="config-row">
+          <span class="config-lbl">Despliegue</span>
+          <span class="config-val">On-Premise o nube del cliente</span>
+        </div>
+        <div class="config-row full">
+          <span class="config-lbl">Grupos de producción</span>
+          <span class="config-val"><strong>Grupo 1:</strong> Semisólidos — cremas, geles, pastas, ungüentos &nbsp;|&nbsp; <strong>Grupo 2:</strong> Líquidos — lociones</span>
+        </div>
+        <div class="config-row">
+          <span class="config-lbl">ERP</span>
+          <span class="config-val">SAP Business One <em style="color:var(--muted);font-size:12px">(fuera del alcance inicial)</em></span>
+        </div>
+        <div class="config-row">
+          <span class="config-lbl">LIMS / Documental</span>
+          <span class="config-val">LIMSCOL · KAWAK <em style="color:var(--muted);font-size:12px">(sin integración inicial)</em></span>
+        </div>
+        <div class="config-row">
+          <span class="config-lbl">Equipos de planta</span>
+          <span class="config-val" style="color:var(--muted);font-style:italic">Por identificar — evaluación posterior</span>
+        </div>
+        <div class="config-row">
+          <span class="config-lbl">Conectividad</span>
+          <span class="config-val">WiFi disponible en planta</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div" />
+
+<!-- ══════════════════ 5. CONSULTORÍA PRE-IMPLEMENTACIÓN ══════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="overline">Servicio previo recomendado</div>
+    <h2 class="sec-title">Adecuación y Estandarización<br>de Formularios de Lote</h2>
+    <p class="sec-sub">Para implementar BACORD, los formularios de batch record deben estar estandarizados y estructurados por grupo farmacéutico. QUIFARMA puede realizar este trabajo internamente o contratar a GI Proyectos para ejecutarlo como consultoría previa al kick-off de implementación.</p>
+
+    <!-- Prerequisito -->
+    <div class="callout" style="background:linear-gradient(135deg,#0f2040,#1b3462);margin-bottom:36px">
+      <div class="callout-icon">⚠️</div>
+      <p>
+        <strong>Prerequisito de implementación:</strong> BACORD construye los registros electrónicos de lote a partir de los formularios actuales de QUIFARMA. Si esos formularios presentan inconsistencias, campos no estandarizados o estructuras distintas entre productos del mismo grupo, esas inconsistencias se replican en el sistema digital. Estandarizarlos antes del kick-off garantiza una implementación más rápida, datos de mayor calidad y una validación INVIMA más sólida.
+      </p>
+    </div>
+
+    <!-- Etapas -->
+    <p style="font-size:11.5px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:2px;margin-bottom:18px">Alcance del servicio — 4 etapas</p>
+
+    <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:36px">
+
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:0;align-items:stretch;background:white;border:1.5px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(27,52,98,.05)">
+        <div style="background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:white;padding:0 14px">1</div>
+        <div style="padding:16px 20px">
+          <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:5px">Diagnóstico</div>
+          <p style="font-size:12.5px;color:var(--muted);line-height:1.55;margin:0">Reunión de alcance con los equipos de Producción y Calidad · Inventario de formularios actuales por grupo farmacéutico · Identificación de inconsistencias, campos faltantes y brechas regulatorias · Entregable: informe de diagnóstico y hallazgos</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:0;align-items:stretch;background:white;border:1.5px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(27,52,98,.05)">
+        <div style="background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:white;padding:0 14px">2</div>
+        <div style="padding:16px 20px">
+          <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:5px">Diseño del estándar</div>
+          <p style="font-size:12.5px;color:var(--muted);line-height:1.55;margin:0">Definición de la estructura estándar por grupo farmacéutico · Campos obligatorios, flujos de aprobación, puntos de control y firmas requeridas · Alineación con requisitos BPM e INVIMA · Entregable: documento de estándar aprobado por el área de Calidad</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:0;align-items:stretch;background:white;border:1.5px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(27,52,98,.05)">
+        <div style="background:var(--orange);display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:white;padding:0 14px">3</div>
+        <div style="padding:16px 20px">
+          <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:5px">Construcción de formularios estandarizados</div>
+          <p style="font-size:12.5px;color:var(--muted);line-height:1.55;margin:0">Adecuación y construcción de los formularios de lote de cada producto dentro del alcance, según el estándar aprobado · Revisión con los equipos de Producción y Calidad · Ajustes y correcciones iterativas</p>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:44px 1fr;gap:0;align-items:stretch;background:white;border:1.5px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(27,52,98,.05)">
+        <div style="background:var(--green);display:flex;align-items:center;justify-content:center;font-size:17px;font-weight:900;color:white;padding:0 14px">4</div>
+        <div style="padding:16px 20px">
+          <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:5px">Aprobación y entrega</div>
+          <p style="font-size:12.5px;color:var(--muted);line-height:1.55;margin:0">Sesión de revisión final con los stakeholders de Producción, Calidad y TI · Incorporación de comentarios y ajustes finales · Entregable: formularios de lote estandarizados por grupo, listos para migración a BACORD</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Cards inferiores -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start">
+
+      <!-- Análisis de alcance previo -->
+      <div style="background:var(--navy);border-radius:14px;padding:24px 28px">
+        <div style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--lb);margin-bottom:14px">¿Cuánto cuesta esta consultoría?</div>
+        <p style="font-size:13px;color:rgba(255,255,255,.85);line-height:1.65;margin:0 0 18px">Los tiempos y la inversión dependen del número de productos, formularios y grupos farmacéuticos dentro del alcance. Por eso, <strong style="color:white">el primer paso es un análisis de alcance</strong> que permita estimar con precisión las actividades, tiempos e inversión requeridos.</p>
+        <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:14px 18px;display:flex;align-items:flex-start;gap:12px">
+          <div style="font-size:22px;line-height:1;flex-shrink:0">🔍</div>
+          <div>
+            <div style="font-size:12px;font-weight:700;color:var(--yellow);margin-bottom:4px">Cómo proceder</div>
+            <p style="font-size:12px;color:rgba(255,255,255,.75);line-height:1.6;margin:0">Si QUIFARMA decide tomar esta consultoría, GI Proyectos realiza primero una sesión de análisis de alcance. Con base en los hallazgos, se entrega una propuesta detallada con tiempos e inversión definidos antes de iniciar cualquier actividad.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nota must + autogestión -->
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="background:#fff8e6;border:1.5px solid #f5c842;border-radius:12px;padding:16px 18px">
+          <div style="font-size:11px;font-weight:700;color:#7a5c00;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px">⚠️ Requisito previo al kick-off</div>
+          <p style="font-size:12.5px;color:#5a4000;line-height:1.6;margin:0">La estandarización de formularios de lote es un <strong>prerequisito obligatorio</strong> para iniciar la implementación de BACORD. El kick-off no puede realizarse sin que los formularios estén adecuados y aprobados por el área de Calidad.</p>
+        </div>
+        <div style="background:var(--gfill);border:1.5px solid #a8d8b8;border-radius:12px;padding:16px 18px">
+          <div style="font-size:11px;font-weight:700;color:var(--gdark);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:6px">✓ Opción de autogestión</div>
+          <p style="font-size:12.5px;color:var(--gdark);line-height:1.6;margin:0">QUIFARMA puede realizar este proceso internamente con su equipo de Producción y Calidad. En ese caso, GI Proyectos entrega la guía de estandarización y los criterios que deben cumplir los formularios antes del kick-off de implementación.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<hr class="div" />
+
+<!-- ══════════════════ 6. COMPONENTE 1: IMPLEMENTACIÓN ══════════════════ -->
+<section class="section" style="background:var(--lgray)">
+  <div class="container">
+    <div class="overline">Componente 1 de 3</div>
+
+    <div class="comp-header">
+      <div class="comp-num">1</div>
+      <div>
+        <div class="comp-title">Fee de implementación</div>
+        <div class="comp-subtitle">Pago único · Cubre el despliegue completo de la plataforma para los grupos de QUIFARMA</div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:38%">Componente</th>
+            <th>Descripción</th>
+            <th class="td-r" style="width:20%">Valor (sin IVA)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Plataforma base BACORD</strong></td>
+            <td>Despliegue del entorno, arquitectura de roles y perfiles, configuración técnica base y soporte de arranque. Incluye la documentación de validación del sistema computarizado (IQ/OQ/PQ) requerida por INVIMA. Se paga una sola vez por proyecto.</td>
+            <td class="td-r">$ 14,000,000</td>
+          </tr>
+          <tr>
+            <td><strong>Grupo 1 — Semisólidos</strong> <span class="note-tag">GROWTH G1</span></td>
+            <td>GI Proyectos construye en BACORD todos los formularios de lote actuales de QUIFARMA para cremas, geles, pastas y ungüentos: flujos de ejecución, instrucciones, puntos de control y firmas electrónicas. El grupo queda operativo y listo para producción al cierre de la implementación.<br><span style="font-size:12px;color:var(--muted)">Precio lista: $ 18,000,000</span></td>
+            <td class="td-r">$ 18,000,000</td>
+          </tr>
+          <tr style="background:#FFF8EC">
+            <td style="color:var(--orange);font-weight:600">↳ Descuento por prueba de concepto — 40% sobre Grupo 1</td>
+            <td style="color:var(--orange);font-size:13px">QUIFARMA y GI Proyectos desarrollaron una prueba de concepto sobre un producto real de la compañía. En ese proceso BACORD fue configurado y validado sobre la operación de QUIFARMA — ese trabajo ya existe y se incorpora directamente al proyecto.</td>
+            <td class="td-r" style="color:var(--orange);font-weight:700">− $ 7,200,000</td>
+          </tr>
+          <tr>
+            <td><strong>Grupo 2 — Líquidos</strong> <span class="note-tag">GROWTH G2</span></td>
+            <td>GI Proyectos construye en BACORD todos los formularios de lote actuales de QUIFARMA para lociones: flujos de ejecución, instrucciones, puntos de control y firmas electrónicas. El grupo queda operativo y listo para producción al cierre de la implementación.</td>
+            <td class="td-r">$ 13,000,000</td>
+          </tr>
+          <tr class="total">
+            <td colspan="2"><strong>TOTAL IMPLEMENTACIÓN</strong> <span style="font-weight:400;font-size:12px">· Sin IVA</span></td>
+            <td class="td-r">$ 37,800,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Nota de alcance -->
+    <div style="background:var(--xlb);border:1.5px solid var(--lb);border-radius:12px;padding:16px 20px;margin-bottom:32px;display:flex;gap:12px;align-items:flex-start">
+      <span style="font-size:17px;flex-shrink:0">📌</span>
+      <p style="font-size:13px;color:var(--navy);line-height:1.65;margin:0"><strong>Alcance de la implementación:</strong> La implementación contempla la parametrización de las formas farmacéuticas y grupos Semisólidos y Líquidos, incluyendo los formularios, registros electrónicos, flujos de aprobación y controles de proceso requeridos para los productos definidos durante la etapa de levantamiento funcional. En caso de requerirse nuevas formas farmacéuticas, procesos o grupos funcionales no contemplados inicialmente, estos serán evaluados y cotizados de manera independiente.</p>
+    </div>
+
+    <!-- Add-ons ERP -->
+    <h3 style="font-size:15px;font-weight:800;color:var(--navy);margin-bottom:6px;margin-top:8px">Add-ons de implementación <span style="font-weight:400;font-size:13px;color:var(--muted)">— opcionales, no incluidos en el alcance inicial</span></h3>
+    <p style="color:var(--muted);font-size:13.5px;line-height:1.65;margin-bottom:22px">Las integraciones se activan según las prioridades del cliente — típicamente después de que el equipo lleve varias semanas operando con BACORD. Pueden cotizarse e incorporarse en cualquier etapa del proyecto.</p>
+
+    <p style="font-size:11.5px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px">Integración con ERP</p>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:20%">Paquete</th>
+            <th>Qué incluye</th>
+            <th class="td-r" style="width:18%">Precio (sin IVA)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Essentials</strong></td>
+            <td>Recepción de órdenes de producción desde ERP + consumo de materiales e inventario hacia ERP</td>
+            <td class="td-r">$ 14,000,000</td>
+          </tr>
+          <tr>
+            <td><strong>Professional</strong></td>
+            <td>Essentials + sincronización de specs de calidad, desviaciones y módulo QA entre sistemas</td>
+            <td class="td-r">$ 22,000,000</td>
+          </tr>
+          <tr>
+            <td><strong>Advanced</strong></td>
+            <td>Professional + sincronización de datos maestros: catálogos, fórmulas y lotes</td>
+            <td class="td-r">$ 28,000,000</td>
+          </tr>
+          <tr>
+            <td><strong>Enterprise</strong></td>
+            <td>Advanced + analítica cruzada: KPIs, dashboards y analítica predictiva integrada con ERP</td>
+            <td class="td-r">$ 36,000,000</td>
+          </tr>
+          <tr>
+            <td><strong>À la carte</strong></td>
+            <td>Capas individuales según necesidad específica del cliente</td>
+            <td class="td-r zero">Cotización</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;color:var(--muted);font-style:italic;margin-top:-20px;margin-bottom:28px">Compatible con SAP, Oracle, Infor, Microsoft Dynamics y otros ERP mediante conectores estándar o API REST.</p>
+
+    <p style="font-size:11.5px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:2px;margin-bottom:12px">Integración con equipos de planta</p>
+    <div class="table-wrap" style="margin-bottom:0">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:12%">Tier</th>
+            <th style="width:28%">Tipos de equipo</th>
+            <th>Descripción</th>
+            <th class="td-r" style="width:18%">Precio (sin IVA)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>S</strong></td><td>1 a 3 tipos</td>
+            <td>Operaciones con pocos tipos de equipo de proceso</td>
+            <td class="td-r">$ 6,000,000</td>
+          </tr>
+          <tr>
+            <td><strong>M</strong></td><td>4 a 8 tipos</td>
+            <td>Variedad media de equipos de producción y control</td>
+            <td class="td-r">$ 11,000,000</td>
+          </tr>
+          <tr>
+            <td><strong>L</strong></td><td>9 a 15 tipos</td>
+            <td>Plantas con alta variedad de equipos instrumentados</td>
+            <td class="td-r">$ 18,000,000</td>
+          </tr>
+          <tr>
+            <td><strong>XL</strong></td><td>16+ tipos</td>
+            <td>Alta complejidad o integración con sistemas SCADA/DCS</td>
+            <td class="td-r zero">Cotización</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:12px;color:var(--muted);font-style:italic;margin-top:10px">Comunicación vía API, OPC-UA o integración directa. Elimina la entrada manual de parámetros críticos.</p>
+
+    <!-- Infraestructura requerida -->
+    <h3 style="font-size:15px;font-weight:800;color:var(--navy);margin-bottom:6px;margin-top:36px">Requisitos de infraestructura <span style="font-weight:400;font-size:13px;color:var(--muted)">— prerequisito para la implementación</span></h3>
+    <p style="color:var(--muted);font-size:13.5px;line-height:1.65;margin-bottom:20px">Independientemente de la opción de despliegue elegida, BACORD requiere siempre <strong style="color:var(--navy)">dos ambientes separados</strong>. La opción de despliegue (On-Premise o nube) determina dónde se alojan esos ambientes y las especificaciones técnicas necesarias.</p>
+
+    <!-- Dos ambientes: siempre requeridos -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:24px">
+      <div style="background:var(--lgray);border-radius:10px;padding:16px 18px;border-left:4px solid var(--navy)">
+        <div style="font-size:12px;font-weight:700;color:var(--navy);margin-bottom:6px">🧪 Ambiente de pruebas</div>
+        <p style="font-size:12.5px;color:var(--muted);line-height:1.55;margin:0">Configuración inicial, validación de formularios con usuarios, y verificación de nuevas actualizaciones antes de aplicarlas a producción. Se recomienda desactivar actualizaciones automáticas del SO en producción — siempre aplicar primero en pruebas.</p>
+      </div>
+      <div style="background:var(--gfill);border-radius:10px;padding:16px 18px;border-left:4px solid var(--green)">
+        <div style="font-size:12px;font-weight:700;color:var(--gdark);margin-bottom:6px">🚀 Ambiente de producción</div>
+        <p style="font-size:12.5px;color:var(--gdark);line-height:1.55;margin:0">Réplica de la configuración validada en pruebas, con los datos reales de operación de QUIFARMA. Es el ambiente activo donde el equipo ejecuta los batch records.</p>
+      </div>
+    </div>
+
+    <!-- Opciones de despliegue -->
+    <p style="font-size:11.5px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px">Opción de despliegue — a definir en el kick-off</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+
+      <!-- On-Premise -->
+      <div style="background:white;border:1.5px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(27,52,98,.06)">
+        <div style="background:var(--navy);padding:14px 20px;display:flex;align-items:center;gap:10px">
+          <span style="font-size:17px">🖥️</span>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:white">On-Premise — Servidor físico de QUIFARMA</div>
+            <div style="font-size:11px;color:var(--lb);margin-top:2px">Control total del entorno, seguridad y datos locales</div>
+          </div>
+        </div>
+        <div style="padding:16px 20px">
+          <div style="font-size:11px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px">Especificaciones mínimas por ambiente</div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+            <div style="display:flex;gap:8px;font-size:12.5px;color:var(--text)"><span style="color:var(--green);font-weight:700;flex-shrink:0">✓</span>Windows Server 2016 o superior (64-bit)</div>
+            <div style="display:flex;gap:8px;font-size:12.5px;color:var(--text)"><span style="color:var(--green);font-weight:700;flex-shrink:0">✓</span>Procesador Core i7 mínimo · 8 GB RAM</div>
+            <div style="display:flex;gap:8px;font-size:12.5px;color:var(--text)"><span style="color:var(--green);font-weight:700;flex-shrink:0">✓</span>512 GB de espacio libre en disco</div>
+            <div style="display:flex;gap:8px;font-size:12.5px;color:var(--text)"><span style="color:var(--green);font-weight:700;flex-shrink:0">✓</span>IIS 7.0+ · .NET Framework 4.7+</div>
+            <div style="display:flex;gap:8px;font-size:12.5px;color:var(--text)"><span style="color:var(--green);font-weight:700;flex-shrink:0">✓</span>Chrome 76+ o Microsoft Edge</div>
+            <div style="display:flex;gap:8px;font-size:12.5px;color:var(--text)"><span style="color:var(--green);font-weight:700;flex-shrink:0">✓</span>ODBC + driver de base de datos (SQL Server, Oracle o MySQL)</div>
+            <div style="display:flex;gap:8px;font-size:12.5px;color:var(--text)"><span style="color:var(--green);font-weight:700;flex-shrink:0">✓</span>Visor de PDF (Acrobat Reader o equivalente)</div>
+          </div>
+          <div style="background:#FFF8EC;border:1px solid #f5d9a0;border-radius:8px;padding:11px 13px">
+            <div style="font-size:10.5px;font-weight:700;color:#8a5e0a;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px">Responsabilidad de QUIFARMA</div>
+            <p style="font-size:12px;color:#6b4a08;line-height:1.55;margin:0">Instalación del motor de base de datos, backups, parches de seguridad del SO, configuración de IIS y certificados HTTPS.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Nube privada -->
+      <div style="background:white;border:1.5px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 2px 12px rgba(27,52,98,.06)">
+        <div style="background:linear-gradient(135deg,#1b6ca8,#2a8fd4);padding:14px 20px;display:flex;align-items:center;gap:10px">
+          <span style="font-size:17px">☁️</span>
+          <div>
+            <div style="font-size:13px;font-weight:700;color:white">Nube privada del cliente</div>
+            <div style="font-size:11px;color:rgba(255,255,255,.75);margin-top:2px">AWS, Azure, Google Cloud u otro proveedor administrado por QUIFARMA</div>
+          </div>
+        </div>
+        <div style="padding:16px 20px">
+          <div style="font-size:11px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px">Consideraciones de despliegue</div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:14px">
+            <div style="display:flex;gap:8px;font-size:12.5px;color:var(--text)"><span style="color:#1b6ca8;font-weight:700;flex-shrink:0">✓</span>Mismas especificaciones de SO y software que On-Premise</div>
+            <div style="display:flex;gap:8px;font-size:12.5px;color:var(--text)"><span style="color:#1b6ca8;font-weight:700;flex-shrink:0">✓</span>Acceso a Internet requerido</div>
+            <div style="display:flex;gap:8px;font-size:12.5px;color:var(--text)"><span style="color:#1b6ca8;font-weight:700;flex-shrink:0">✓</span>Desactivar actualizaciones automáticas del SO en producción</div>
+            <div style="display:flex;gap:8px;font-size:12.5px;color:var(--text)"><span style="color:#1b6ca8;font-weight:700;flex-shrink:0">✓</span>Aplicar actualizaciones siempre en pruebas primero, luego en producción</div>
+          </div>
+          <div style="background:#FFF8EC;border:1px solid #f5d9a0;border-radius:8px;padding:11px 13px">
+            <div style="font-size:10.5px;font-weight:700;color:#8a5e0a;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px">Responsabilidad de QUIFARMA</div>
+            <p style="font-size:12px;color:#6b4a08;line-height:1.55;margin:0">Certificados SSL, dirección IP pública, sizing del entorno de nube, disponibilidad y backups. La gestión del proveedor de nube es responsabilidad del cliente.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="div" />
+
+<!-- ══════════════════ 6. COMPONENTE 2: SUSCRIPCIÓN ══════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="overline">Componente 2 de 3</div>
+
+    <div class="comp-header">
+      <div class="comp-num">2</div>
+      <div>
+        <div class="comp-title">Suscripción anual</div>
+        <div class="comp-subtitle">Recurrente · Garantiza acceso continuo a la plataforma, actualizaciones y soporte especializado</div>
+      </div>
+    </div>
+
+    <!-- GROWTH banner -->
+    <div class="growth-banner">
+      <div class="growth-banner-top">
+        <div>
+          <div class="growth-banner-badge">Plan GROWTH · QUIFARMA</div>
+          <div class="growth-banner-price">$22,000,000</div>
+          <div class="growth-banner-price-sub">COP / año · sin IVA · facturado anualmente desde el go-live</div>
+        </div>
+        <p class="growth-banner-desc">
+          El plan <strong style="color:white">GROWTH</strong> está diseñado para laboratorios con operaciones en expansión. Cubre hasta <strong style="color:var(--yellow)">3 grupos de producción activos</strong> con usuarios ilimitados. QUIFARMA opera hoy con 2 grupos — tiene margen para incorporar un tercero en el futuro <strong style="color:var(--yellow)">sin aumentar el costo de la suscripción</strong>. Incluye actualizaciones continuas y soporte técnico especializado durante toda la vigencia.
+        </p>
+      </div>
+    </div>
+
+    <!-- Condiciones de la suscripción -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:28px">
+      <div style="background:var(--lgray);border:1.5px solid var(--border);border-radius:12px;padding:20px 22px;border-left:4px solid var(--navy)">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--navy);margin-bottom:8px">Compromiso mínimo</div>
+        <p style="font-size:13.5px;color:var(--text);line-height:1.65;margin-bottom:0">La contratación de la suscripción es <strong>obligatoria durante los primeros 12 meses</strong> contados desde la salida a producción. Dado el carácter regulado de los procesos y la etapa de adopción y estabilización, GI Proyectos recomienda mantener el servicio por un <strong>mínimo de 24 meses</strong>.</p>
+      </div>
+      <div style="background:var(--lgray);border:1.5px solid var(--border);border-radius:12px;padding:20px 22px;border-left:4px solid var(--green)">
+        <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--green-dark);margin-bottom:8px">Renovación</div>
+        <p style="font-size:13.5px;color:var(--text);line-height:1.65;margin-bottom:0">La renovación del segundo año se realiza en las <strong>mismas condiciones comerciales</strong> acordadas para el primer año, salvo modificaciones previamente aceptadas por ambas partes.</p>
+      </div>
+    </div>
+
+    <!-- Qué incluye -->
+    <p style="font-size:11.5px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px">¿Qué incluye la suscripción GROWTH?</p>
+    <div class="includes-grid">
+      <div class="include-item">
+        <span class="include-check">✓</span>
+        <div>
+          <div class="include-title">Plataforma completa + actualizaciones</div>
+          <div class="include-desc">Incluye mejoras correctivas, evolutivas menores y nuevas funcionalidades liberadas dentro de la versión contratada de BACORD. Proyectos de migración mayor, cambios de arquitectura o implementaciones que requieran actividades especiales serán evaluados y cotizados de manera independiente.</div>
+        </div>
+      </div>
+      <div class="include-item">
+        <span class="include-check">✓</span>
+        <div>
+          <div class="include-title">Usuarios ilimitados</div>
+          <div class="include-desc">Sin costo adicional por usuario. Operarios, supervisores, calidad y dirección, todos incluidos.</div>
+        </div>
+      </div>
+      <div class="include-item">
+        <span class="include-check">✓</span>
+        <div>
+          <div class="include-title">Hasta 3 grupos activos</div>
+          <div class="include-desc">QUIFARMA usa 2 hoy — puede incorporar un tercero sin incrementar el costo de suscripción.</div>
+        </div>
+      </div>
+      <div class="include-item">
+        <span class="include-check">✓</span>
+        <div>
+          <div class="include-title">1 ambiente de capacitación / QA</div>
+          <div class="include-desc">Ambiente independiente para pruebas, capacitación y validación de cambios antes de producción.</div>
+        </div>
+      </div>
+      <div class="include-item highlight">
+        <span class="include-check">✓</span>
+        <div>
+          <div class="include-title">Soporte Standard 5×8 — L1 interno + L2 GI Proyectos</div>
+          <div class="include-desc">Durante la implementación se capacitan los administradores de QUIFARMA como primer nivel (L1): atienden dudas operativas, gestionan accesos y escalan a GI cuando es necesario. GI Proyectos provee el segundo nivel (L2): incidentes técnicos, errores de plataforma, soporte de parametrizaciones y mantenimiento correctivo.</div>
+        </div>
+      </div>
+      <div class="include-item highlight">
+        <span class="include-check">✓</span>
+        <div>
+          <div class="include-title">10 horas/mes de atención L2 especializada</div>
+          <div class="include-desc">Cobertura L–V, 8AM–5PM. Las horas no consumidas en un mes <strong style="color:var(--yellow)">no se acumulan</strong> al período siguiente. Horas adicionales se facturan a tarifa vigente de servicios profesionales. Nota: capacitaciones, parametrización de nuevas formas farmacéuticas, integraciones y desarrollos evolutivos <em>no</em> consumen estas horas y se cotizan por separado.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add-ons suscripción -->
+    <p style="font-size:11.5px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px">Add-ons de suscripción — opcionales</p>
+    <div class="addons-grid3">
+
+      <div class="addon-card">
+        <div style="height:4px;background:var(--orange);border-radius:4px 4px 0 0;margin:-20px -22px 18px"></div>
+        <div class="addon-lbl">Grupos adicionales</div>
+        <div class="addon-price">+$6M <span>/ grupo / año</span></div>
+        <p class="addon-desc">Para cada grupo que supere el límite del plan (3 para GROWTH). QUIFARMA tiene disponible 1 grupo antes de necesitar este add-on.</p>
+      </div>
+
+      <div class="addon-card" style="border:1.5px solid var(--border)">
+        <div style="height:4px;background:#2e7d9e;border-radius:4px 4px 0 0;margin:-20px -22px 18px"></div>
+        <div class="addon-lbl" style="color:#2e7d9e">Extended GMP 6×12</div>
+        <div class="addon-price">$19M <span>/ año</span></div>
+        <p class="addon-desc" style="margin-bottom:12px">Para operaciones con turnos extendidos o producción en sábados. Cubre más del doble del horario estándar sin el costo de una guardia permanente.</p>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;gap:8px;align-items:flex-start;font-size:12px;color:var(--text)"><span style="color:#2e7d9e;font-weight:700;flex-shrink:0">→</span>Lunes a sábado, 8AM–8PM</div>
+          <div style="display:flex;gap:8px;align-items:flex-start;font-size:12px;color:var(--text)"><span style="color:#2e7d9e;font-weight:700;flex-shrink:0">→</span>12 horas/mes de atención L2 especializada</div>
+          <div style="display:flex;gap:8px;align-items:flex-start;font-size:12px;color:var(--text)"><span style="color:#2e7d9e;font-weight:700;flex-shrink:0">→</span>Soporte funcional, técnico y mantenimiento correctivo</div>
+          <div style="display:flex;gap:8px;align-items:flex-start;font-size:12px;color:var(--text)"><span style="color:#2e7d9e;font-weight:700;flex-shrink:0">→</span>Escalamiento a Critical GMP si el incidente lo requiere</div>
+        </div>
+      </div>
+
+      <div class="addon-card" style="border:1.5px solid var(--border)">
+        <div style="height:4px;background:var(--navy);border-radius:4px 4px 0 0;margin:-20px -22px 18px"></div>
+        <div class="addon-lbl" style="color:var(--navy)">Critical GMP 7×24</div>
+        <div class="addon-price">$24M <span>/ año</span></div>
+        <p class="addon-desc" style="margin-bottom:12px">Para organizaciones con operación productiva continua que no pueden permitirse tiempo fuera de línea. Guardias técnicas permanentes.</p>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;gap:8px;align-items:flex-start;font-size:12px;color:var(--text)"><span style="color:var(--navy);font-weight:700;flex-shrink:0">→</span>Atención 24h × 7d — festivos incluidos</div>
+          <div style="display:flex;gap:8px;align-items:flex-start;font-size:12px;color:var(--text)"><span style="color:var(--navy);font-weight:700;flex-shrink:0">→</span>15 horas/mes de atención L2 especializada</div>
+          <div style="display:flex;gap:8px;align-items:flex-start;font-size:12px;color:var(--text)"><span style="color:var(--navy);font-weight:700;flex-shrink:0">→</span>Guardias técnicas especializadas y escalamiento prioritario</div>
+          <div style="display:flex;gap:8px;align-items:flex-start;font-size:12px;color:var(--text)"><span style="color:var(--navy);font-weight:700;flex-shrink:0">→</span>Mantenimiento correctivo para incidentes críticos de producción GMP</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="div" />
+
+<!-- ══════════════════ 7. COMPONENTE 3: IA ══════════════════ -->
+<section class="section" style="background:var(--lgray)">
+  <div class="container">
+    <div class="overline">Componente 3 de 3</div>
+
+    <div class="comp-header">
+      <div class="comp-num" style="background:linear-gradient(135deg,var(--navy),#2a4f8a)">3</div>
+      <div>
+        <div class="comp-title">Módulos de Inteligencia Artificial</div>
+        <div class="comp-subtitle">Add-on anual · Se activan sobre los datos reales de la operación · No incluidos en el alcance inicial de QUIFARMA</div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th style="width:28%">Módulo</th>
+            <th>Qué hace</th>
+            <th class="td-r" style="width:16%">Precio / año<br><span style="font-weight:400;font-size:11px">(sin IVA)</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>📊 <strong>Detección de desviaciones</strong></td>
+            <td>Monitoreo continuo durante la ejecución del batch. Alerta al operario y supervisor antes de que una desviación afecte la calidad del producto.</td>
+            <td class="td-r">$ 8,000,000</td>
+          </tr>
+          <tr>
+            <td>🔍 <strong>Revisión por excepción</strong></td>
+            <td>La IA analiza el batch record y señala únicamente las líneas con inconsistencias. La revisión de calidad pasa de días a horas.</td>
+            <td class="td-r">$ 7,000,000</td>
+          </tr>
+          <tr>
+            <td>🔔 <strong>Alertas inteligentes</strong></td>
+            <td>Notificaciones configurables cruzando ERP, equipos e historial de lotes para anticipar condiciones críticas antes de que se conviertan en problemas.</td>
+            <td class="td-r">$ 6,000,000</td>
+          </tr>
+          <tr>
+            <td>📈 <strong>Reportes estadísticos automáticos</strong></td>
+            <td>KPIs, tendencias y métricas por lote, línea y período. Generados automáticamente al cierre de cada batch, sin consolidación manual.</td>
+            <td class="td-r">$ 5,000,000</td>
+          </tr>
+          <tr style="background:#FFF8EC">
+            <td>⭐ <strong>Paquete IA Operativa</strong></td>
+            <td>Detección de desviaciones + Alertas inteligentes. <strong style="color:var(--orange)">Ahorro $1M vs. individual.</strong></td>
+            <td class="td-r" style="color:var(--orange);font-weight:700">$ 13,000,000</td>
+          </tr>
+          <tr style="background:#EBF3FA">
+            <td>⭐ <strong>Paquete IA Completa</strong></td>
+            <td>Los 4 módulos. <strong style="color:var(--navy)">Ahorro $4M vs. individual.</strong></td>
+            <td class="td-r" style="color:var(--navy);font-weight:700">$ 22,000,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<hr class="div" />
+
+<!-- ══════════════════ 8. PLAN DE IMPLEMENTACIÓN ══════════════════ -->
+<section class="section" style="background:var(--navy2)">
+  <div class="container">
+    <div class="overline light">Proceso de implementación</div>
+    <h2 class="sec-title white">De la firma del contrato<br>a la operación digital</h2>
+    <p class="sec-sub" style="color:rgba(255,255,255,.55)">La implementación de BACORD para QUIFARMA se ejecuta en tres fases consecutivas. El equipo de GI Proyectos acompaña todo el proceso — desde la configuración inicial hasta que la planta opera 100% sin papel.</p>
+
+    <div class="impl-track">
+
+      <div class="impl-phase">
+        <div class="impl-phase-num">1</div>
+        <div class="impl-phase-name">Diagnóstico y configuración</div>
+        <div class="impl-phase-duration">⏱ Semanas 1 – 4</div>
+        <ul class="impl-phase-list">
+          <li>Relevamiento de procesos productivos actuales de QUIFARMA</li>
+          <li>Diseño de flujos de ejecución para cada grupo en BACORD</li>
+          <li>Configuración del entorno técnico (On-Premise o nube)</li>
+          <li>Setup de roles, permisos y estructura de usuarios</li>
+          <li>Revisión y ajuste de formularios con el equipo de calidad</li>
+        </ul>
+      </div>
+
+      <div class="impl-arrow"><span>→</span></div>
+
+      <div class="impl-phase">
+        <div class="impl-phase-num">2</div>
+        <div class="impl-phase-name">Capacitación y puesta a punto</div>
+        <div class="impl-phase-duration">⏱ Semanas 5 – 8</div>
+        <ul class="impl-phase-list">
+          <li>Capacitación al equipo de producción, calidad, supervisores y TI</li>
+          <li>Ejecución de los primeros lotes de prueba en el sistema</li>
+          <li>Período de marcha paralela: sistema activo + papel como respaldo</li>
+          <li>Ajustes y refinamiento con base en el feedback del equipo</li>
+          <li>Validación y aprobación de flujos por usuarios clave</li>
+        </ul>
+      </div>
+
+      <div class="impl-arrow"><span>→</span></div>
+
+      <div class="impl-phase">
+        <div class="impl-phase-num">3</div>
+        <div class="impl-phase-name">Go-live y estabilización</div>
+        <div class="impl-phase-duration">⏱ Semanas 9 – 12</div>
+        <ul class="impl-phase-list">
+          <li>Cierre progresivo del papel — un grupo a la vez</li>
+          <li>Operación 100% digital en todos los grupos del alcance</li>
+          <li>Soporte intensivo de arranque por parte del equipo GI</li>
+          <li>Entrega formal: documentación, actas y cierre de proyecto</li>
+          <li>Transición al soporte de suscripción estándar</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="callout" style="margin-top:36px;margin-bottom:0">
+      <div class="callout-icon">💡</div>
+      <p>
+        <strong>Para QUIFARMA:</strong> el alcance inicial cubre los 2 grupos — Semisólidos y Líquidos — con una duración estimada de <strong>10 a 12 semanas</strong> desde el kick-off. Las integraciones con SAP B.O. y equipos de planta se activan cuando el equipo esté listo, como un proyecto separado dentro de la suscripción activa. El cronograma detallado se define en la sesión de kick-off junto con los líderes de Producción, Calidad y TI.
+      </p>
+    </div>
+  </div>
+</section>
+
+<hr class="div" />
+
+<!-- ══════════════════ 9. INVERSIÓN ══════════════════ -->
+<section class="section">
+  <div class="container">
+    <div class="overline">Inversión</div>
+    <h2 class="sec-title">Resumen de inversión</h2>
+
+    <div class="inv-hero">
+      <div class="inv-hero-grid">
+        <div class="inv-hero-item">
+          <div class="inv-hero-lbl">Implementación</div>
+          <div class="inv-hero-val"><em>$37.8M</em></div>
+          <div class="inv-hero-note">Pago único · incl. desc. 40% G1</div>
+        </div>
+        <div class="inv-hero-divider"></div>
+        <div class="inv-hero-item">
+          <div class="inv-hero-lbl">Año 1 total</div>
+          <div class="inv-hero-val"><em>$59.8M</em></div>
+          <div class="inv-hero-note">Implementación + suscripción</div>
+        </div>
+        <div class="inv-hero-divider"></div>
+        <div class="inv-hero-item">
+          <div class="inv-hero-lbl">Desde el año 2</div>
+          <div class="inv-hero-val"><em>$22M</em> <span style="font-size:1.2rem;color:rgba(255,255,255,.4)">/año</span></div>
+          <div class="inv-hero-note">Suscripción anual GROWTH</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Concepto</th>
+            <th class="td-r" style="width:26%">Valor (sin IVA)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Plataforma base BACORD</td><td class="td-r">$ 14,000,000</td></tr>
+          <tr><td>Grupo 1 — Semisólidos (precio lista GROWTH G1)</td><td class="td-r">$ 18,000,000</td></tr>
+          <tr style="background:#FFF8EC"><td style="color:var(--orange)">↳ Descuento por prueba de concepto — 40% sobre Grupo 1</td><td class="td-r" style="color:var(--orange);font-weight:700">− $ 7,200,000</td></tr>
+          <tr><td>Grupo 2 — Líquidos (GROWTH G2)</td><td class="td-r">$ 13,000,000</td></tr>
+          <tr class="total"><td><strong>TOTAL IMPLEMENTACIÓN</strong></td><td class="td-r">$ 37,800,000</td></tr>
+          <tr><td>Suscripción GROWTH — Año 1</td><td class="td-r">$ 22,000,000</td></tr>
+          <tr class="total"><td><strong>AÑO 1 TOTAL</strong></td><td class="td-r">$ 59,800,000</td></tr>
+          <tr class="total"><td><strong>DESDE AÑO 2 — Suscripción anual GROWTH</strong></td><td class="td-r">$ 22,000,000 / año</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="font-size:13px;color:var(--muted);font-style:italic;margin-top:-20px">Todos los valores en COP sin IVA. El IVA del 19% se factura por separado según normativa vigente. Vigencia de esta propuesta: 30 días a partir de la fecha de emisión.</p>
+  </div>
+</section>
+
+<hr class="div" />
+
+<!-- ══════════════════ 10. PRÓXIMOS PASOS ══════════════════ -->
+<section class="section" style="background:var(--lgray)">
+  <div class="container">
+    <div class="overline">Siguientes acciones</div>
+    <h2 class="sec-title">¿Qué sigue?</h2>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-title" style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:10px">Revisión de la propuesta</div>
+        <p style="font-size:13.5px;color:var(--muted);line-height:1.65">Sesión de trabajo de 60–90 minutos para revisar esta propuesta, resolver preguntas y confirmar el alcance inicial de los 2 grupos.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-title" style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:10px">Aprobación y contrato</div>
+        <p style="font-size:13.5px;color:var(--muted);line-height:1.65">El contrato de implementación y el de suscripción son independientes. QUIFARMA puede iniciar con el despliegue y activar integraciones o IA en el momento que elija.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-title" style="font-size:15px;font-weight:700;color:var(--navy);margin-bottom:10px">Kick-off del proyecto</div>
+        <p style="font-size:13.5px;color:var(--muted);line-height:1.65">Con el contrato firmado se programa el kick-off oficial. Se definen cronograma detallado, participantes por área y fechas de la Fase 1.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="div" />
+
+<!-- ══════════════════ 11. CONTACTO ══════════════════ -->
+<section class="section contact-section">
+  <div class="container">
+    <div class="overline light">Contacto</div>
+    <h2 class="sec-title white" style="margin-bottom:36px">Hablemos</h2>
+
+    <div class="contact-card">
+      <div class="contact-avatar">H</div>
+      <div>
+        <div style="font-size:22px;font-weight:800;color:white;margin-bottom:4px">Hugo Fernando Rosas F.</div>
+        <div style="font-size:14px;color:var(--lb);margin-bottom:22px">Director Comercial — GI Proyectos SAS</div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <a href="mailto:Hugo.Rosas@giproyectos.com" style="color:white;text-decoration:none;font-size:15px;display:flex;align-items:center;gap:10px;transition:color .2s">
+            <span style="font-size:15px;width:20px;text-align:center">✉</span>Hugo.Rosas@giproyectos.com
+          </a>
+          <a href="tel:+573136454928" style="color:white;text-decoration:none;font-size:15px;display:flex;align-items:center;gap:10px;transition:color .2s">
+            <span style="font-size:15px;width:20px;text-align:center">📱</span>+57 313 645 49 28
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <p style="color:rgba(255,255,255,.3);font-size:12px;margin-top:52px;text-align:center">
+      BACORD by ZENTTRA &nbsp;·&nbsp; GI Proyectos SAS &nbsp;·&nbsp; Propuesta Comercial Confidencial &nbsp;·&nbsp; Junio 2026
+    </p>
+  </div>
+</section>
+
+</body>
+</html>
